@@ -23,6 +23,9 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "secp256k1"
+        ),
+        .target(
             name: "SuiKit",
             dependencies: [
                 .product(name: "BigInt", package: "BigInt"),
