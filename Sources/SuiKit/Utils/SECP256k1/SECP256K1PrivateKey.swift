@@ -31,13 +31,7 @@ import Blake2
 import CryptoKit
 @_implementationOnly import secp256k1
 
-public struct SECP256K1PublicKeyLux {
-    internal var raw: secp256k1_pubkey
 
-    internal init(raw: secp256k1_pubkey) {
-        self.raw = raw
-    }
-}
 
 /// `SECP256K1PrivateKey` is a struct representing a private key using the SECP256K1 elliptic curve cryptography.
 public struct SECP256K1PrivateKey: Equatable, PrivateKeyProtocol {
@@ -187,7 +181,7 @@ public struct SECP256K1PrivateKey: Equatable, PrivateKeyProtocol {
         return serializedKey
     }
     
-    public static func serializePublicKey(publicKey: SECP256K1PublicKeyLux, compressed: Bool = false) -> Data? {
+    internal static func serializePublicKey(publicKey: inout secp256k1_pubkey, compressed: Bool = false) -> Data? {
         guard let context = secp256k1_context_create(UInt32(SECP256K1_CONTEXT_SIGN|SECP256K1_CONTEXT_VERIFY)) else { return nil }
         var keyLength = compressed ? 33 : 65
         var serializedPubkey = Data(repeating: 0x00, count: keyLength)
