@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import secp256k1
+@_implementationOnly import secp256k1
 import Blake2
 
 public struct SECP256K1PublicKey: Equatable, PublicKeyProtocol {
