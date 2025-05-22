@@ -25,7 +25,7 @@
 
 import Foundation
 import SwiftyJSON
-import AnyCodable
+import AnyCodableSui
 import Blake2
 import BigInt
 
@@ -67,6 +67,7 @@ public struct SuiProvider {
                     AnyCodable(devInspectTxBytes),
                     AnyCodable(gasPrice),
                     AnyCodable(epoch)
+                    
                 ]
             )
         )

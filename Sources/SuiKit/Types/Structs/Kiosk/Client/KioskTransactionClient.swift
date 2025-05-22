@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import AnyCodable
+import AnyCodableSui
 
 /**
  * A helper for building transactions that involve kiosk.

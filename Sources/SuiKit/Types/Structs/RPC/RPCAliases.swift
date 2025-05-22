@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import AnyCodable
+import AnyCodableSui
 
 public typealias HttpHeaders = [String: String]
 public typealias RequestParamsLike = [AnyCodable]

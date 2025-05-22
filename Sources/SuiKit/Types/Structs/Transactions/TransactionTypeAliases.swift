@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import AnyCodable
+import AnyCodableSui
 
 public typealias EpochId = String
 public typealias SequenceNumber = String

@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import AnyCodable
+import AnyCodableSui
 
 #if swift(>=6.0)
 /// Protocol defining the requirements for an RPC (Remote Procedure Call) error request.

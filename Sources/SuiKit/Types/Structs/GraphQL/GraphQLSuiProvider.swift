@@ -25,7 +25,7 @@
 
 import Foundation
 import SwiftyJSON
-import AnyCodable
+import AnyCodableSui
 import Blake2
 import Apollo
 import ApolloAPI

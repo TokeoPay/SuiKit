@@ -24,7 +24,7 @@
 //
 
 import Foundation
-import AnyCodable
+import AnyCodableSui
 
 /// The object a Rule resolving function accepts
 /// It can accept a set of fixed fields, that are part of every purchase flow as well any extra arguments to resolve custom policies!

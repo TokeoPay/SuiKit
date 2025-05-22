@@ -25,7 +25,7 @@
 
 import Foundation
 import UInt256
-import AnyCodable
+import AnyCodableSui
 
 public protocol EncodingProtocol: EncodingContainer { }
 

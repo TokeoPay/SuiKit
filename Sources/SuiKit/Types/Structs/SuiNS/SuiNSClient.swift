@@ -24,7 +24,7 @@
 //
 
 import SwiftyJSON
-import AnyCodable
+import AnyCodableSui
 import Foundation
 
 public class SuiNSClient {

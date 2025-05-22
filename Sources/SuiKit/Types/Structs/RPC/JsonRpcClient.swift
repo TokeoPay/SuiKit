@@ -25,7 +25,7 @@
 
 import Foundation
 import SwiftyJSON
-import AnyCodable
+import AnyCodableSui
 
 public struct JsonRpcClient {
     /// Represents the package version.
