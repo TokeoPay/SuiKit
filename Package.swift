@@ -8,23 +8,50 @@ let package = Package(
     products: [
         .library(
             name: "SuiKit",
-            targets: ["SuiKit"]),
+            targets: ["SuiKit"]
+        )
     ],
     dependencies: [
-        .package(url: "https://github.com/MarcoDotIO/UInt256.git", from: "1.0.0"),
-        .package(url: "https://github.com/pebble8888/ed25519swift.git", from: "1.2.7"),
-        .package(url: "https://github.com/SwiftyJSON/SwiftyJSON.git", from: "4.0.0"),
-        .package(url: "https://github.com/tesseract-one/Blake2.swift.git", from: "0.2.0"),
+        .package(
+            url: "https://github.com/MarcoDotIO/UInt256.git",
+            from: "1.0.0"
+        ),
+        .package(
+            url: "https://github.com/pebble8888/ed25519swift.git",
+            from: "1.2.7"
+        ),
+        .package(
+            url: "https://github.com/SwiftyJSON/SwiftyJSON.git",
+            from: "4.0.0"
+        ),
+        .package(
+            url: "https://github.com/tesseract-one/Blake2.swift.git",
+            from: "0.2.0"
+        ),
         .package(url: "https://github.com/luxbg/AnyCodableSui", from: "1.0.1"),
-        .package(url: "https://github.com/tesseract-one/Bip39.swift.git", from: "0.1.1"),
-        .package(url: "https://github.com/auth0/JWTDecode.swift", from: "3.1.0"),
+        .package(
+            url: "https://github.com/tesseract-one/Bip39.swift.git",
+            from: "0.1.1"
+        ),
+        .package(
+            url: "https://github.com/auth0/JWTDecode.swift",
+            from: "3.1.0"
+        ),
         .package(url: "https://github.com/attaswift/BigInt.git", from: "5.3.0"),
-        .package(url: "https://github.com/apollographql/apollo-ios.git", exact: "1.17.0")
+        .package(
+            url: "https://github.com/apollographql/apollo-ios.git",
+            exact: "1.17.0"
+        ),
+        .package(
+            name: "Secp256k1Swift",
+            url: "https://github.com/mathwallet/Secp256k1Swift",
+            from: "2.0.0"
+        ),
     ],
     targets: [
-        .target(
-            name: "secp256k1sui"
-        ),
+//        .target(
+//            name: "secp256k1sui"
+//        ),
         .target(
             name: "SuiKit",
             dependencies: [
@@ -37,7 +64,7 @@ let package = Package(
                 .product(name: "Bip39", package: "Bip39.swift"),
                 .product(name: "JWTDecode", package: "JWTDecode.swift"),
                 .product(name: "Apollo", package: "apollo-ios"),
-                "secp256k1sui"
+                "Secp256k1Swift",
             ]
         ),
         .testTarget(
@@ -54,7 +81,7 @@ let package = Package(
                 .copy("Resources/id-entry-args.json"),
                 .copy("Resources/kiosk.json"),
                 .copy("Resources/serializer.json"),
-                .copy("Resources/serializer-upgrade.json")
+                .copy("Resources/serializer-upgrade.json"),
             ]
         ),
     ]
